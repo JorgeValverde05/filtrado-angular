@@ -1,0 +1,161 @@
+/* ===============================
+   BASE
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121826;
+  color: #e5e7eb;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+/* ===============================
+   FILTROS
+================================ */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 28px;
+
+  background-color: #1f2937;
+  border-radius: 12px;
+}
+
+/* Inputs y selects */
+.filtros input,
+.filtros select {
+  background-color: #2a3446;
+  color: #e5e7eb;
+
+  border: 1px solid transparent;
+  border-radius: 10px;
+
+  padding: 10px 14px;
+  font-size: 0.95rem;
+
+  outline: none;
+  transition: 0.25s ease;
+}
+
+.filtros input::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus */
+.filtros input:focus,
+.filtros select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+}
+
+/* Botón */
+.filtros button {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 10px 18px;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.filtros button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.filtros button:active {
+  transform: translateY(0);
+}
+
+/* ===============================
+   GRID
+================================ */
+.destinos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+/* ===============================
+   TARJETA
+================================ */
+.tarjeta {
+  background-color: #1f2937;
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* Imagen */
+.tarjeta img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Texto */
+.tarjeta h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 14px 16px 6px;
+  color: #f9fafb;
+}
+
+.tarjeta p {
+  margin: 4px 16px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Precio destacado */
+.tarjeta p:last-of-type {
+  margin-top: 10px;
+  margin-bottom: 16px;
+
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* Indicador visual del precio */
+.tarjeta p:last-of-type::before {
+  content: '€';
+  margin-right: 6px;
+  color: #38bdf8;
+}
+
+/* ===============================
+   SIN RESULTADOS
+================================ */
+.sin-resultados {
+  margin-top: 32px;
+  padding: 16px;
+
+  text-align: center;
+  font-weight: 600;
+  color: #f87171;
+
+  background-color: rgba(248, 113, 113, 0.1);
+  border-radius: 12px;
+}
