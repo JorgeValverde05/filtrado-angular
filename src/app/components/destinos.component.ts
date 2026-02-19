@@ -94,7 +94,7 @@ export class DestinosComponent {
       nombre: 'Lima',
       pais: 'Perú',
       continente: 'América',
-      tipo: 'Aventura',
+      tipo: 'Montaña',
       precio: 150,
       imagen: 'assets/images/destinos/lima.jpg'
     },
